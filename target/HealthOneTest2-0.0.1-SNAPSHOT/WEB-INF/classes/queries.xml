@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+	<queryMap>
+		<entry>
+			<key>DrugSearchDAO.Drugquery</key>
+			<value>
+				<sql>
+					select d.drugname, d.primaryid, d.caseid from drugs d
+					 where UPPER(d.drugname) = ? 
+				</sql>
+			</value>
+			
+		</entry>
+	</queryMap>
+</queries>
