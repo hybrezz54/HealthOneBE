@@ -1,3 +1,4 @@
+package com.ost.ho.daos;
 /*
  * package com.ost.ho.config.daos;
  * 

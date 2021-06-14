@@ -1,4 +1,4 @@
-package com.ost.ho.config.daos;
+package com.ost.ho.daos;
 
 import java.util.List;
 
@@ -10,4 +10,6 @@ import com.ost.ho.model.Drug;
 public interface DrugSearchDAO  {
 
  public List<Drug> getDrugs(String drugName);
+ public List<Drug> getaLLDrug();
+ 
 }

@@ -15,7 +15,7 @@
 			<key>UserDAO.insertuserDetails</key>
 			<value>
 				<sql>
-					insert into User_detail(user_id, first_name, last_name, profession, country) values(?, ?, ? ,?,?)
+					insert into user_Detail(User_id, First_Name, Last_Name, Profession) values(?, ?, ? ,?)
 				</sql>
 			</value>
 			
@@ -25,7 +25,7 @@
 			<key>UserDAO.selectuser</key>
 			<value>
 				<sql>
-					select * from Users where user_id = ?
+					select * from users where userid = ?
 				</sql>
 			</value>
 			
@@ -35,10 +35,67 @@
 			<key>UserDAO.insertuser</key>
 			<value>
 				<sql>
-					insert into Users(user_id, password) values(?, ?)
+					insert into users(userid, password, create_time) values(?, ?, SYSDATE())
 				</sql>
 			</value>
 			
+		</entry>
+		
+		<entry>
+			<key>dashboardDao.getAllAgeGrp</key>
+			<value>
+				<sql>
+					select *  from age_grp
+				</sql>
+			</value>
+			
+		</entry>
+		
+		<entry>
+			<key>dashboardDao.getAllCountires</key>
+			<value>
+				<sql>
+					select country  from Country;
+				</sql>
+			</value>
+			
+		</entry>
+		
+		<entry>
+			<key>DrugSearchDAO.AllDrug</key>
+			<value>
+				<sql>
+					select drug_name from Drugs limit 1000
+				</sql>
+			</value>
+			
+		</entry>
+		
+		<entry>
+			<key>dashboardDao.getManufacturer</key>
+			<value>
+				<sql>
+					select mfr_name from Manufacturer
+				</sql>
+			</value>
+		</entry>
+		
+		<entry>
+			<key>dashboardDao.getIndicators</key>
+			<value>
+				<sql>
+					select indi_pt from Indication limit 1000
+				</sql>
+			</value>
+		</entry>
+		
+		<entry>
+			<key>dashboardDao.getOutcomes</key>
+			<value>
+				<sql>
+					select out_cod, out_cod_desc from outcomes
+				</sql>
+			</value>
 		</entry>
 	</queryMap>
 </queries>
